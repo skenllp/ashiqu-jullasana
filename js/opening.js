@@ -27,7 +27,7 @@
     ready.then(function () {
       scrollTo(0, 0);
       document.body.classList.remove('lock');
-      document.body.classList.add('opened', 'page-entering');
+      document.body.classList.add('opened');
       intro.classList.add('out');
       petals();
       document.dispatchEvent(new CustomEvent('invitation:opened'));

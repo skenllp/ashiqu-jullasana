@@ -1,4 +1,5 @@
 /* Curtain opening + cover (Amar & Nena style) and Allura upgrades for the inside sections */
+html{scrollbar-gutter:stable}
 body.lock{overflow:hidden;height:100%}
 .script{font-family:var(--font-script);font-weight:400}
 
