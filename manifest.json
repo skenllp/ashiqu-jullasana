@@ -1,0 +1,15 @@
+{
+  "name": "Ashiqu & Dr. Jullasana — Wedding Invitation",
+  "short_name": "A & J Wedding",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#F9F5EF",
+  "theme_color": "#1B2218",
+  "icons": [
+    {
+      "src": "favicon/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
