@@ -13,12 +13,15 @@ Groom-side invitation. Lightweight, dependency-free (HTML5 + CSS3 + vanilla JS).
 
 ## Things to finish before publishing
 
-1. **Share image** — `og.jpg` is still the old preview; replace it with a screenshot of the new cover.
+1. **Share image** — `og.jpg` is regenerated on the curtain cover; replace the domain too.
+1b. **Photos (optional)** — drop real photos into `images/` and point the `src` of the two
+   profile images in the "The Couple" section at them (currently
+   `images/groom.svg` and `images/bride.svg`, 4:5 portrait works best).
 2. **Map pin** — the Google Maps embed and the *Get Directions* button search for
    "Sara Convention Center" by name. For an exact pin, open the venue in Google
    Maps → Share → Embed a map, and paste that `src` into the iframe in
    `#venue` (and a precise link into `#directions-btn`).
-3. **Domain** — `https://example.com` is a placeholder in `index.html`
+3. **Domain** — set to https://ashiqu-jullasana.vercel.app (change it if the final domain differs).
    (canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD), `sitemap.xml`
    and `robots.txt`. Replace it with the final domain. WhatsApp needs the
    absolute `og:image` URL to be live.
@@ -26,12 +29,6 @@ Groom-side invitation. Lightweight, dependency-free (HTML5 + CSS3 + vanilla JS).
    guest messages). Add real wishes by duplicating a `.wish-card` block.
 5. **Music** — `assets/music.mp3` plays after the first tap/click.
 
-## Structure (v3 — curtain opening + cover like Amar & Nena, Allura script)
-
-```
-index.html
-css/     style.css
-js/      main.js (opening/music/reveal) · countdown.js · wishes.js
-fonts/   Allura.woff2
-assets/  video/opening.mp4 (sage curtain) · img/ (cover, poster, backgrounds) · music.mp3
-```
+## Structure (v3)
+Curtain opening video + cover (Amar & Nena style): `css/opening.css`, `js/opening.js`, `assets/video/`, `assets/img/`.
+Sections below the cover follow the Irfan & Kadeeja layout, with Allura (`fonts/Allura.woff2`) for script text.

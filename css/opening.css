@@ -1,0 +1,65 @@
+/* Curtain opening + cover (Amar & Nena style) and Allura upgrades for the inside sections */
+body.lock{overflow:hidden;height:100%}
+.script{font-family:var(--font-script);font-weight:400}
+
+#intro{position:fixed;inset:0;z-index:1000;background:#cfd9c4 url(../assets/img/poster.jpg) center/cover no-repeat;transition:opacity 1.4s cubic-bezier(.4,0,.2,1);overflow:hidden}
+#intro video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+#intro.out{opacity:0;pointer-events:none}
+#open{position:absolute;left:50%;bottom:calc(12% + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:none;border:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:16px;transition:opacity .5s;-webkit-tap-highlight-color:transparent}
+#open.gone{opacity:0;pointer-events:none}
+.seal{position:relative;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#EAD7A6,#B8995A 60%,#8A6F3F);box-shadow:0 6px 20px rgba(40,52,32,.4),inset 0 0 0 4px rgba(255,253,248,.35),inset 0 0 0 5px rgba(255,253,248,.7)}
+.seal:before,.seal:after{content:"";position:absolute;inset:-2px;border-radius:50%;border:1px solid rgba(255,253,248,.9);animation:sealRing 2.4s ease-out infinite}
+.seal:after{animation-delay:1.2s}
+@keyframes sealRing{to{transform:scale(1.55);opacity:0}}
+.seal b{font-size:42px;line-height:1;color:#FFFDF8;font-weight:400;text-shadow:0 1px 2px rgba(40,52,32,.5);padding-top:4px}
+.seal em{font-style:normal;font-size:28px;margin:0 1px}
+.lbl{white-space:nowrap;font:500 13px var(--font-display);letter-spacing:.4em;text-transform:uppercase;color:#FFFDF8;padding-left:.4em;text-shadow:0 1px 6px rgba(40,52,32,.7)}
+#open:active .seal{transform:scale(.96)}
+
+/* cover */
+.cover{position:relative;min-height:100dvh;background:#DCE4D2;display:flex;justify-content:center}
+.cover__frame{position:relative;width:100%;max-width:520px;height:100dvh;min-height:560px;overflow:hidden}
+.cover__bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover__content{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:66%;max-width:320px;text-align:center;z-index:2;color:var(--color-maroon)}
+.cover__bismillah{white-space:nowrap;font:22px/1.7 'Amiri',serif;color:var(--color-maroon);margin-bottom:4px}
+.cover__translation{font:italic 500 14px/1.55 var(--font-serif);color:var(--color-text-light);margin-bottom:22px}
+.cover__names{font-family:var(--font-script);font-weight:400;font-size:56px;line-height:.95;display:flex;flex-direction:column;align-items:center;margin:6px 0 4px;color:var(--color-maroon);text-shadow:0 1px 0 rgba(255,255,255,.5)}
+.cover__names .amp{font-size:34px;color:var(--color-gold-dark);line-height:1.1;margin:2px 0}
+.cover__names .n2{font-size:50px;white-space:nowrap}
+.cover__tagline{font:italic 500 15px/1.6 var(--font-serif);color:var(--color-text-light);margin-top:20px}
+.cover__date{font:500 12px var(--font-display);letter-spacing:.3em;color:var(--color-gold-dark);margin-top:20px;padding-left:.3em}
+.cover__content>*{opacity:0;transform:translateY(18px);transition:opacity 1.2s var(--ease-luxury),transform 1.2s var(--ease-luxury)}
+.opened .cover__content>*{opacity:1;transform:none}
+.opened .cover__content>:nth-child(1){transition-delay:.5s}.opened .cover__content>:nth-child(2){transition-delay:.7s}
+.opened .cover__content>:nth-child(3){transition-delay:.95s}.opened .cover__content>:nth-child(4){transition-delay:1.3s}
+.opened .cover__content>:nth-child(5){transition-delay:1.55s}
+.cover__scroll{position:absolute;left:50%;bottom:calc(22px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;color:var(--color-text-light);text-decoration:none;font:500 11px var(--font-display);letter-spacing:.35em;text-transform:uppercase;animation:coverBob 1.8s ease-in-out infinite;z-index:3}
+.cover__scroll span{padding-left:.35em}
+@keyframes coverBob{50%{transform:translate(-50%,8px)}}
+
+/* petals after opening */
+#pt{position:fixed;inset:0;pointer-events:none;z-index:5;overflow:hidden;opacity:0;transition:opacity 1s}
+#pt.show{opacity:1}
+#pt i{position:absolute;border-radius:70% 0 70% 0;background:linear-gradient(135deg,#E5ECDA,#BFCDB0);animation:petalDrift linear infinite}
+@keyframes petalDrift{0%{opacity:0;top:-30px;left:var(--x);transform:rotate(0)}10%{opacity:var(--o)}90%{opacity:var(--o)}100%{opacity:0;top:100dvh;left:calc(var(--x) + var(--dx));transform:rotate(var(--rot))}}
+.floating-flowers{display:none}
+
+/* ---------- Allura for the inside sections ---------- */
+.section-title{font-family:var(--font-script);font-weight:400;letter-spacing:0;line-height:1.1;font-size:clamp(3rem,9vw,4.6rem);color:var(--color-maroon-deep)}
+.eyebrow{letter-spacing:.34em}
+.couple-card__name{font-family:var(--font-script)!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important;font-size:clamp(3rem,10vw,3.8rem)!important;line-height:1.1}
+.regards-card__names{font-family:var(--font-script)!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important;font-size:clamp(2.4rem,8vw,3.2rem)!important;line-height:1.2}
+.regards-card__names span{font-family:inherit!important;font-size:inherit!important}
+.regards-card__amp{font-size:.8em}
+.timeline__title,.story__signature,.footer__names{font-family:var(--font-script)!important;font-weight:400!important;letter-spacing:0!important;text-transform:none!important}
+.timeline__title{font-size:clamp(2.6rem,8vw,3.4rem)!important;line-height:1.1}
+.story__signature{font-size:2.6rem!important}
+.footer__names{font-size:clamp(2.8rem,9vw,4rem)!important;line-height:1.1}
+.venue .section-title{font-size:clamp(2.8rem,8vw,4rem)}
+.badge__day{font-family:var(--font-script)}
+
+@media(max-width:380px){.cover__names{font-size:50px}.cover__names .n2{font-size:44px}}
+@media(prefers-reduced-motion:reduce){.cover__content>*{transition:none;opacity:1;transform:none}#pt{display:none}.seal:before,.seal:after,.cover__scroll{animation:none}}
+.regards-card--family .regards-card__names{font-size:clamp(2rem,7vw,2.6rem)!important}
+.regards-card{margin-bottom:var(--sp-4)}
+.story__signature{line-height:1.15}
