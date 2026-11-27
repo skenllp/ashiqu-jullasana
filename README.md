@@ -21,7 +21,7 @@ Groom-side invitation. Lightweight, dependency-free (HTML5 + CSS3 + vanilla JS).
    "Sara Convention Center" by name. For an exact pin, open the venue in Google
    Maps → Share → Embed a map, and paste that `src` into the iframe in
    `#venue` (and a precise link into `#directions-btn`).
-3. **Domain** — set to https://ashiqu-jullasana.vercel.app (change it if the final domain differs).
+3. **Domain** — set to https://jullasana-ashiqu.vercel.app (change it if the final domain differs).
    (canonical, `og:url`, `og:image`, `twitter:image`, JSON-LD), `sitemap.xml`
    and `robots.txt`. Replace it with the final domain. WhatsApp needs the
    absolute `og:image` URL to be live.
