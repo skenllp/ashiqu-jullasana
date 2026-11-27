@@ -26,7 +26,7 @@ body.lock{overflow:hidden;height:100%}
 .cover__translation{font:italic 500 14px/1.55 var(--font-serif);color:var(--color-text-light);margin-bottom:22px}
 .cover__names{font-family:var(--font-script);font-weight:400;font-size:56px;line-height:.95;display:flex;flex-direction:column;align-items:center;margin:6px 0 4px;color:var(--color-maroon);text-shadow:0 1px 0 rgba(255,255,255,.5)}
 .cover__names .amp{font-size:34px;color:var(--color-gold-dark);line-height:1.1;margin:2px 0}
-.cover__names .n2{font-size:50px;white-space:nowrap}
+.cover__names .n1{font-size:50px;white-space:nowrap}
 .cover__tagline{font:italic 500 15px/1.6 var(--font-serif);color:var(--color-text-light);margin-top:20px}
 .cover__date{font:500 12px var(--font-display);letter-spacing:.3em;color:var(--color-gold-dark);margin-top:20px;padding-left:.3em}
 .cover__content>*{opacity:0;transform:translateY(18px);transition:opacity 1.2s var(--ease-luxury),transform 1.2s var(--ease-luxury)}
@@ -59,8 +59,17 @@ body.lock{overflow:hidden;height:100%}
 .venue .section-title{font-size:clamp(2.8rem,8vw,4rem)}
 .badge__day{font-family:var(--font-script)}
 
-@media(max-width:380px){.cover__names{font-size:50px}.cover__names .n2{font-size:44px}}
+@media(max-width:380px){.cover__names{font-size:50px}.cover__names .n1{font-size:44px}.cover__names .n2{font-size:50px}}
 @media(prefers-reduced-motion:reduce){.cover__content>*{transition:none;opacity:1;transform:none}#pt{display:none}.seal:before,.seal:after,.cover__scroll{animation:none}}
 .regards-card--family .regards-card__names{font-size:clamp(2rem,7vw,2.6rem)!important}
 .regards-card{margin-bottom:var(--sp-4)}
 .story__signature{line-height:1.15}
+.couple-card__address{font-size:.85rem;opacity:.8;margin-top:6px;color:var(--color-gold-light)}
+.couple-card__parents-label{margin-top:4px}
+.couple-card__parents+.couple-card__parents{margin-top:6px}
+.regards-card__address a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(227,205,155,.5)}
+.regards-card--family .regards-card__names span:not(.regards-card__amp){display:block}
+.cover__names .n2{font-size:56px;line-height:.95}
+.footer__names{font-size:clamp(2.6rem,8vw,3.6rem)!important}
+.couple-card__parents{text-wrap:balance;line-height:1.5}
+.cover__names .n1{font-size:48px}

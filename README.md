@@ -1,4 +1,4 @@
-# Ashiqu & Dr. Jullasana — Wedding Invitation Website
+# Dr. Jullasana & Ashiqu — Wedding Invitation Website
 
 Groom-side invitation. Lightweight, dependency-free (HTML5 + CSS3 + vanilla JS).
 
@@ -7,7 +7,7 @@ Groom-side invitation. Lightweight, dependency-free (HTML5 + CSS3 + vanilla JS).
 - **Groom:** Ashiqu — son of Mr. Abdul Nasir Ahsani & Mrs. Labeeba, Thumbakkuzhiyil (H), Vazhamburam P.O.
 - **Bride:** Dr. Jullasana
 - **Special compliments:** Jefrin
-- **Event:** Nikah and Wedding Reception
+- **Event:** Wedding Reception
 - **Date / time:** Saturday, 26 December 2026 · 11:00 AM – 2:00 PM (IST, Asia/Kolkata) · 16 Rajab 1448
 - **Venue:** Sara Convention Center
 
